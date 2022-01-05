@@ -15,5 +15,5 @@ jobs:
     uses: epamemail/reusable_workflow/.github/workflows/reusable-workflow-child.yml@main
     with:
       some_param: 'soma param'
-    secrets:
-      some_secret: ${{ secrets.SOME_SECRET }}
+#     secrets:
+#       some_secret: ${{ secrets.SOME_SECRET }}
