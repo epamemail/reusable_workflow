@@ -1,0 +1,22 @@
+name: Child
+
+on:
+  workflow_call:
+    inputs:
+      some_param:
+        required: true
+        type: string
+    secrets:
+      some_secret:
+        required: true
+jobs:
+  first:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo param
+        run: echo ${{ inputs.some_param }}
+      
+      - name: Echo secret
+        run: echo ${{ secrets.some_secret }}
+
