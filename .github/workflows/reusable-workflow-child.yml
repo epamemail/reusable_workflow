@@ -3,7 +3,7 @@ name: Child
 on:
   workflow_call:
     inputs:
-      some_param:
+      github_sha:
         required: true
         type: string
     secrets:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Echo param
-        run: echo ${{ inputs.some_param }}
+        run: echo ${{ inputs.github_sha }}
       
       - name: Echo secret
         run: echo ${{ secrets.SOME_SECRET }}
