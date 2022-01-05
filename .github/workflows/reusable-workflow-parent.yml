@@ -12,7 +12,7 @@ jobs:
         run: echo Hello, world!
 
   second:
-    uses: epamemail/reusable_workflow/.github/workflows/reusable-workflow.yml@main
+    uses: epamemail/reusable_workflow/.github/workflows/reusable-workflow-child.yml@main
     with:
       SOMA_PARAM: 'soma param'
     secrets:
