@@ -18,5 +18,5 @@ jobs:
         run: echo ${{ inputs.some_param }}
       
       - name: Echo secret
-        run: echo ${{ secrets.some_secret }}
+        run: echo ${{ secrets.SOME_SECRET }}
 
