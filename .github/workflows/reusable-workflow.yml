@@ -1,0 +1,19 @@
+name: Parent
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  second:
+    uses: epamemail/reusable_workflow/.github/workflows/reusable-workflow.yml@main
+    with:
+      SOMA_PARAM: 'soma param'
+    secrets:
+      some_secret: ${{ secrets.SOME_SECRET }}
